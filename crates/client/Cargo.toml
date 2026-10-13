@@ -1,0 +1,12 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2024"
+
+# Produces the 'relay-client' binary when installed.
+[[bin]]
+name = "relay-client"
+path = "src/main.rs"
+
+[dependencies]
+protocol = { path = "../protocol" }

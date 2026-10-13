@@ -1,0 +1,38 @@
+# crate: relay workspace
+# file:  .gitignore
+#
+# Excludes build artifacts, editor files, OS noise,
+# and any secrets that must never be committed.
+
+# ── Rust build output ─────────────────────────────────────────────────
+/target/
+
+# Cargo lock is committed for binaries, ignored for libraries.
+# This is a workspace with binaries, so Cargo.lock IS committed.
+# (Remove the line below if you want to keep that behaviour.)
+# Cargo.lock
+
+# ── Editor & IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Environment & secrets ─────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+*.cert
+*.p12
+id_rsa
+id_ed25519
+
+# ── Logs & temp files ─────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
